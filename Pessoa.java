@@ -2,17 +2,25 @@ package modelo;
 
 public class Pessoa {
     private String nome;
-    private int idade;
-    private String sexo;
+    private String endereco;
+    private String telefone;
 
-    public Pessoa(String nome, int idade, String sexo) {
-        this.nome = nome;
-        this.idade = idade;
-        this.sexo = sexo;
+    public Pessoa() {
+        this.nome = "";
+        this.endereco = "";
+        this.telefone = "";
     }
 
-    public void fazerAniv() {
-        this.idade++;
+    public Pessoa(String nome) {
+        this.nome = nome;
+        this.endereco = "";
+        this.telefone = "";
+    }
+
+    public Pessoa(String nome, String endereco, String telefone) {
+        this.nome = nome;
+        this.endereco = endereco;
+        this.telefone = telefone;
     }
 
     public String getNome() {
@@ -23,19 +31,19 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public int getIdade() {
-        return idade;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
-    public String getSexo() {
-        return sexo;
+    public String getTelefone() {
+        return telefone;
     }
 
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 }
